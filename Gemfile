@@ -5,7 +5,9 @@ gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-
+group :test do
+  gem 'rspec'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'friendly_id', '~> 5.0.0'
