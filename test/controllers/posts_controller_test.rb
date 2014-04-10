@@ -46,4 +46,8 @@ class PostsControllerTest < ActionController::TestCase
 
     assert_redirected_to posts_path
   end
+  test "should create a valid permalink(slug)" do
+    post = Post.create(:name=>"test post", :title=>"My Title")
+    assert_equal "my-title", post.slug
+  end
 end
