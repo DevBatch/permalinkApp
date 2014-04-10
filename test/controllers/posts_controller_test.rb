@@ -50,4 +50,10 @@ class PostsControllerTest < ActionController::TestCase
     post = Post.create(:name=>"test post", :title=>"My Title")
     assert_equal "my-title", post.slug
   end
+  test "should create a route for permalink" do
+    post = Post.create(:name=>"test post", :title=>"newTitle")
+    path = post_path post
+    assert_equal "/posts/newtitle", path
+  end
+
 end
